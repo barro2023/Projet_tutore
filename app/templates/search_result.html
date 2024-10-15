@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résultats de la Recherche</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Résultats de la Recherche</h1>
+        <nav>
+            <a href="{{ url_for('dashboard') }}">Retour au Tableau de Bord</a>
+            <a href="{{ url_for('search') }}">Nouvelle Recherche</a>
+            <a href="{{ url_for('logout') }}">Se déconnecter</a>
+        </nav>
+    </header>
+    <main>
+        {% for listing in listings %}
+    <div>
+        <h2>{{ listing.title }}</h2>
+        <p>Type: {{ listing.type }}</p>
+        <p>Prix: {{ listing.price }}</p>
+        <p>Localisation: {{ listing.location }}</p>
+        <p>Description: {{ listing.description }}</p>
+    </div>
+        {% else %}
+    <h2><p>Aucune annonce trouvée.</p></h2>
+        {% endfor %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Notre Plateforme Immobilière</p>
+    </footer>
+
+</body>
+</html>

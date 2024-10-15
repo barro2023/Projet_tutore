@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualisation des tendances des prix</title>
+</head>
+<body>
+    <header>
+        <h1>Tendances des prix moyens par région</h1>
+    </header>
+    {% if graph_html %}
+        <div>{{ graph_html | safe }}</div>
+    {% else %}
+        <p>Auncune donnée à afficher.</p>
+    {% endif %}
+    <footer>
+        <p>&copy; 2024 Notre Plateforme Immobilière</p>
+    </footer>
+</body>
+</html>

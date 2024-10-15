@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recherche</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Recherche d'Annonces</h1>
+    </header>
+    <main>
+        <form method="GET" action="{{ url_for('search_result') }}">
+            <label for="type">Type de bien :</label>
+            <select id="type" name="type">
+                <option value="">Tous</option>
+                <option value="appartement">Appartement</option>
+                <option value="maison">Maison</option>
+                <option value="terrain">Terrain</option>
+            </select>
+                
+            <label for="price">Prix :</label>
+            <input type="number" id="price_max" name="price">
+
+            <label for="location">Localisation :</label>
+            <input type="text" id="location" name="location">
+
+            <button type="submit">Rechercher</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Notre Plateforme Immobilière</p>
+    </footer>
+
+</body>
+</html>

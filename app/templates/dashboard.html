@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Bord</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Tableau de Bord</h1>
+        <nav>
+            <a href="{{ url_for('annonces') }}">Voir les annonces</a>
+            <a href="{{ url_for('search') }}">Rechercher des annonces</a>
+            <a href="{{ url_for('logout') }}">Se déconnecter</a>
+            <a href="{{ url_for('visualisation') }}">Voir le graphique</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Bienvenue sur notre plateforme Immobilière, explorez les meilleures offres et suivez les tendances du marché.</h2>
+    </main>
+    <footer>
+        <p>&copy; 2024 Notre Plateforme Immobilière</p>
+    </footer>
+</body>
+</html>
